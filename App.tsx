@@ -1,20 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View, Text, Image, TouchableOpacity } from "react-native";
+import { styles } from "./styles";
+import CircleIcon from "./assets/CircleIcon.png";
 
-export default function App() {
+const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <TouchableOpacity>
+        <Text style={styles.title}>
+          Bem vindo,Thais
+        </Text>
+        <Image source={CircleIcon} style={styles.image} />
+      </TouchableOpacity>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
