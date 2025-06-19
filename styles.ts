@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
@@ -16,5 +16,39 @@ export const styles = StyleSheet.create({
     tintColor: "#f00",
     width: 50,
     height: 50
+  },
+  textSkill: {
+    marginLeft: 5,
+    color: '#FFF',
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
+  buttonSkill: {
+    backgroundColor: '#1f1e25',
+    padding: 15,
+    borderRadius: 50,
+    alignItems: 'center',
+    marginVertical: 5,
+    flexDirection: "row",
+  },
+  buttonText: {
+    color: '#FFF',
+    fontSize: 17,
+    fontWeight: 'bold'
+  },
+  button: {
+    backgroundColor: '#a370f7',
+    padding: 15,
+    borderRadius: 7,
+    alignItems: 'center',
+    marginTop: 20
+  },
+  input: {
+    backgroundColor: '#1f1e25',
+    color: '#fff',
+    fontSize: 18,
+    padding: Platform.OS === 'ios' ? 15 : 10,
+    marginTop: 30,
+    borderRadius: 7
   },
 });
