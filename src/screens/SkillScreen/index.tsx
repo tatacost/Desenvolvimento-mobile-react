@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, Image, TouchableOpacity, TextInput, FlatList, StatusBar } from "react-native";
 import { styles } from "./styles";
-import CircleIcon from "./assets/CircleIcon.png";
+import CircleIcon from "../../../assets/CircleIcon.png";
 
 interface skillProps {
   id: string;
@@ -13,9 +13,7 @@ interface skillProps {
 //   name: string;
 // }
 
-
-
-const App = () => {
+const SkillScreen = () => {
   const [skills, setSkills] = useState<String[]>([]);
   const [newSkill, setNewSkill] = useState<String>('');
 
@@ -41,13 +39,12 @@ const App = () => {
       <TextInput
 
         style={styles.input}
+        // onChangeText={text => {
+        //   setNewSkill(text);
         onChangeText={setNewSkillList}
-      // onChangeText={text => {
-      //   setNewSkill(text);
       />
-      <TouchableOpacity
-        style={styles.button}
-        onPress={setNewSkillList}
+      <TouchableOpacity style={styles.button}
+        onPress={(setSkills)}
 
       >
         <Text style={styles.buttonText}>
@@ -72,4 +69,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default SkillScreen;
